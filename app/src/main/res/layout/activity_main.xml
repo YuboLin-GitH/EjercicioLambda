@@ -8,43 +8,69 @@
     tools:context=".MainActivity">
 
 
-    <EditText
-        android:id="@+id/inputNumero"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:hint="Introduce un número"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
     <Button
-        android:id="@+id/btnComprobar"
+        android:id="@+id/btFiltra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Es primo?"
+        android:layout_marginBottom="236dp"
+        android:text="Filtra"
         app:layout_constraintBottom_toTopOf="@+id/txtResultado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputNumero"
-        app:layout_constraintVertical_bias="0.278"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="68dp"
         android:padding="8dp"
         android:text="Resultado aquí"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="130dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/etiqueta_Array"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Se_Muestrar_ARRAY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/GroupRadioBoton"
+        android:layout_width="217dp"
+        android:layout_height="141dp"
+        app:layout_constraintBottom_toTopOf="@+id/btFiltra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etiqueta_Array">
+
+        <RadioButton
+            android:id="@+id/rbPrimos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fitra_primos" />
+
+        <RadioButton
+            android:id="@+id/rbMagicos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filtra_magicos" />
+
+        <RadioButton
+            android:id="@+id/rbCapicuas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Filtra_capicuas" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
